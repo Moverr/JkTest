@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaskTestTest {
 
 
-    @Autowired
     private TaskTest taskTest;
 
     @BeforeEach
@@ -25,21 +24,11 @@ class TaskTestTest {
     }
 
     @Test
-    void calc() {
+    void addition() {
 
         int result = taskTest.add(1,2);
         assertEquals(result,3);
     }
 
-    @Test
-    void add() {
-    }
 
-    @Test
-    void mult() {
-    }
-
-    @Test
-    void minus() {
-    }
 }
