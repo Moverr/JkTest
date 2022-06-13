@@ -5,6 +5,9 @@ pipeline {
         stage('Master') {
 
             steps {
+            try{
+            sh './gradlew test'
+            }
              jacoco()
                 echo 'Building..'
 
