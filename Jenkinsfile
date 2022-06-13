@@ -4,11 +4,6 @@ pipeline {
     stages {
         stage('Master') {
 
-            when{
-                expressions{
-                BRANCH_NAME ='master' && CODE_CHANGES = true
-                }
-            }
             steps {
 
             sh './gradlew test'
