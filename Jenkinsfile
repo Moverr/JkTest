@@ -14,8 +14,9 @@ pipeline {
             steps {
 
             sh './gradlew test'
-             sh './gradlew build jacocoTestReport'
+            sh './gradlew build jacocoTestReport'
             jacoco()
+
             echo 'Building..'
 
 
