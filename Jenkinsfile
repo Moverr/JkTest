@@ -6,18 +6,12 @@ pipeline {
 
             steps {
 
-            sh './gradlew test'
-
-
-
+                sh './gradlew test'
+                sh './gradlew build jacocoTestReport'
+              jacoco()
+              echo 'Building..'
             }
-            steps{
-              sh './gradlew build jacocoTestReport'
-                     }
-                     steps{
-                        jacoco()
-                                             echo 'Building..'
-                                             }
+
 
         }
         stage('Dev') {
