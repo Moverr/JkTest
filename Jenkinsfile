@@ -5,15 +5,14 @@ pipeline {
         stage('Master') {
 
             steps {
-            try{
+
             sh './gradlew test'
-            }finally{
-             jacoco()
-            }
+            jacoco()
+            echo 'Building..'
 
-                echo 'Building..'
 
             }
+
         }
         stage('Test') {
             steps {
