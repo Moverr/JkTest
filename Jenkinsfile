@@ -7,8 +7,10 @@ pipeline {
             steps {
             try{
             sh './gradlew test'
-            }
+            }finally{
              jacoco()
+            }
+
                 echo 'Building..'
 
             }
