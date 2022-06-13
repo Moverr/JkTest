@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+    CODE_CHANGES = getGitCodeChanges()
+
     stages {
         stage('Master') {
 
