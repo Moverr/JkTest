@@ -5,7 +5,9 @@ pipeline {
         stage('Master') {
 
             steps {
+             jacoco()
                 echo 'Building..'
+
             }
         }
         stage('Test') {
