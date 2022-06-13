@@ -8,7 +8,7 @@ pipeline {
 
             when{
                 expressions{
-                BRANCH_NAME ='master' && CODE_CHANGES = true
+                BRANCH_NAME ='dev' && CODE_CHANGES = true
                 }
             }
             steps {
